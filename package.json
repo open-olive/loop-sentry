@@ -1,0 +1,50 @@
+{
+  "name": "@oliveai/loop-sentry",
+  "version": "0.0.1",
+  "description": "This project is a simple wrapper around the @sentry/browser package to work with the LDK",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npm run clear && tsc",
+    "clear": "rm -rf dist || del /s /q dist",
+    "lint": "eslint ./ --ignore-path .gitignore",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "author": "Olive",
+  "copyright": "Copyright 2021 Olive",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/common-tags": "^1.8.1",
+    "@types/jest": "^27.4.0",
+    "eslint": "^8.6.0",
+    "eslint-config-airbnb-typescript-prettier": "^5.0.0",
+    "jest": "^27.4.7",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/plugin-transform-async-to-generator": "^7.13.0",
+    "@babel/plugin-transform-destructuring": "^7.13.0",
+    "@babel/plugin-transform-runtime": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/runtime": "^7.13.10",
+    "@babel/runtime-corejs2": "^7.13.10",
+    "@oliveai/ldk": "^3.9.2",
+    "@sentry/core": "6.17.0-beta.0",
+    "@sentry/browser": "6.17.0-beta.0",
+    "@sentry/types": "6.17.0-beta.0",
+    "@sentry/utils": "6.17.0-beta.0",
+    "babel-loader": "^8.2.2",
+    "common-tags": "^1.8.0",
+    "core-js": "^3.19.2",
+    "terser-webpack-plugin": "^5.1.1",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.0",
+    "webpack-merge": "^5.7.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/open-olive/loop-sentry.git"
+  }
+}
