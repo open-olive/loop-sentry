@@ -1,6 +1,6 @@
 # Sentry LDK
 
-This repository is a library that wraps the [@sentry/browser](https://github.com/getsentry/sentry-javascript/tree/master/packages/browser) for the Loops.
+This library is a wrapper of the [@sentry/browser](https://github.com/getsentry/sentry-javascript/tree/master/packages/browser) library for the use in Loops by creating a custom transport leveraging the Network Aptitude.
 
 ## Usage
 
@@ -8,8 +8,8 @@ All logs except for `console.error` will add a breadcrumb automatically through 
 is called it will then call the `captureException` method from sentry and climb up the call stack storing all of the logs/breadcrumbs
 along the way. `Sentry.init()` should be called as soon as possible it is recommended that is added to loop start up logic.
 
-Note: Since this is a wrapper library most methods in the sentry documentation still work as intended [Sentry Javascript Docs](https://docs.sentry.io/platforms/javascript/)
-with a caveat loops run in custom runtime and not all features of sentry work (ex. integrations with things like the filesystem or history API)
+Note: Since this is a wrapper library most methods in the sentry documentation still work as intended and can be used like the @sentry/browser library. There is one caveat which is that loops run in a custom runtime and not all features of sentry may work (ex. integrations with things like the filesystem or history API)
+[Sentry Javascript Docs](https://docs.sentry.io/platforms/javascript/)
 
 ```
 // Loop Start up logic
