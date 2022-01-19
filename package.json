@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "npm run clear && tsc",
+    "install": "npm run build",
     "clear": "rm -rf dist || del /s /q dist",
     "lint": "eslint ./ --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix"
