@@ -18,7 +18,7 @@ import * as Sentry from 'sentry-loop-logging';
 
 (async function main(): Promise<void> {
     Sentry.init({
-      dsn: 'https://<dns url> ',
+      dsn: 'https://<dsn url> ',
     });
     try {
       console.log('Starting Loop'); // Adds a breadcrumb with a level of log
@@ -37,6 +37,9 @@ import * as Sentry from 'sentry-loop-logging';
     }
 })();
 ```
+
+### Important!
+Since we are using the Network Aptitude the network permission will need to be add to the loop `package.json`permissions with the dsn url as one of the properties.
 
 Above example in sentry would look something like this:
 
