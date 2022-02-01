@@ -3,6 +3,11 @@
   "version": "0.0.1",
   "description": "This project is a simple wrapper around the @sentry/browser package to work with the LDK",
   "main": "dist/index.js",
+  "keywords": [
+    "olive",
+    "loop",
+    "loops"
+  ],
   "scripts": {
     "build": "npm run clear && tsc",
     "install": "npm run build",
@@ -47,5 +52,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/open-olive/loop-sentry.git"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/open-olive/loop-sentry/issues"
+  },
+  "homepage": "https://github.com/open-olive/loop-sentry#readme"
 }
